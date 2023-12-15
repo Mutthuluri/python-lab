@@ -1,0 +1,13 @@
+print("select 1 for celcius to farenheit\n select 2 for farenheit to celcius")
+vv = int(input())
+match vv:
+    case 1:
+        print("enter the value of celcius")
+        cel = float(input())
+        faren = (cel*1.8)+32
+        print(faren)
+    case 2:
+        print("ENTER the value of farenheit")
+        farenheit = float(input())
+        celcius = (farenheit-32)*(5/9)
+        print(celcius)
