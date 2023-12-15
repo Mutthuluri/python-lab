@@ -1,0 +1,12 @@
+vv = []
+take = int(input("Enter the size of the list\n"))
+print("Enter the ",take,"values")
+v =1
+while(v <= take):
+    vv.append(int(input()))
+    v+=1
+vv.sort()
+print(vv,"\nThe ascending order of the list are given above")
+vv1 = vv[::-1]
+print(vv1,"\n The desendign order of the list are as follows")
+
