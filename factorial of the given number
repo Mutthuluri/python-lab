@@ -1,0 +1,9 @@
+vv = int(input("Enter the number\n"))
+i,f = 1,1
+if(vv<0):
+    print("Your request has been denied as per the ramanujan")
+else:
+    while(i<=vv):
+        f=f*i
+        i=i+1
+print(f,"is the required factorial of the",vv)
