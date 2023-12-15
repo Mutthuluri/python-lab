@@ -1,0 +1,8 @@
+vv = int(input("Enter the year\n"))
+if(vv>0):
+    if(vv%4==0 and vv%100!=0):
+        print("Entered year is leap year")
+    else:
+        print("Entered year is not a leap year")
+else:
+    print("Entered year is not valid")
