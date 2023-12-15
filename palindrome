@@ -1,0 +1,8 @@
+vv1 = input("Enter the name or number")
+vv2 = vv1[::-1]
+print(vv2)
+print(vv2)
+if(vv1==vv2):
+    print("it is a palindrome")
+else:
+    print("it is not a palindrome")
