@@ -1,0 +1,8 @@
+vv = [4,6,7,54,67,67]
+length = len(vv)
+if(length<=0):
+    print("The list is empty")
+else:
+    total = sum(vv)
+    average = total/length
+    print(average,"is the average of the given list")
