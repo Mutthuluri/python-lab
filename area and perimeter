@@ -1,0 +1,16 @@
+vv = int(input("Enter the 1 area and 2 for perimeter of rectangle"))
+match vv:
+    case 1:
+        print("Enter the lenght of the rectangle")
+        lenn = float(input())
+        print("Enter the breadth of the rectangle")
+        bread = float(input())
+        area = lenn*bread
+        print(area,"is the area of the rectangle")
+    case 2:
+        lenn = float(input("enter the lenght of the rectangle"))
+        bread = float(input("enter the breadth of the rectangle"))
+        perimeter = 2*(lenn*bread)
+        print(perimeter,"is the required perimeter of the rectangle")
+    case _ :
+        print("default syntax check trail1")
