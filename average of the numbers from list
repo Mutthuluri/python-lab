@@ -6,3 +6,19 @@ else:
     total = sum(vv)
     average = total/length
     print(average,"is the average of the given list")
+
+########################################################################################
+###########dynamic input#####################################
+vv = []
+n = int(input("enter n "))
+i = 1
+while(i= <= n):
+    vv.append(float(input()))
+    i +=1
+length = len(vv)
+if(length<=0):
+    print("The list is empty")
+else:
+    total = sum(vv)
+    average = total/length
+    print(average,"is the average of the given list")
