@@ -1,0 +1,39 @@
+class Student:
+    def __init__(self,enroll_num,name,father_name):
+        self.enroll_num = enroll_num
+        self.name = name
+        self.father_name = father_name
+        
+class Teacher:
+    def __init__(self,teacher_no,teacher_name,subject):
+        self.teacher_no = teacher_no
+        self.teacher_name = teacher_name
+        self.subject = subject
+        
+class Course:
+    def __init__(self,department,branch,specialization):
+        self.department = department
+        self.branch = branch
+        self.specialization = specialization
+        
+        
+e_no = int(input("ENter the enrollment number:\n"))
+s_name = input("Enter the Student name :\n")
+sf_name = input("Enter the student father name :\n")
+t_no = int(input("ENter the teacher enrollment number:\n"))
+t_name = input("Enter the teacher name :\n")
+t_subject = input("Enter the teacher subject:\n ")
+s_dep = input("Enter the department name:\n")
+s_branch = input("Enter the branch name :\n")
+s_speci = input("Enter the specialization name :\n")
+
+student1 = Student(e_no,s_name,sf_name)
+student2 = Student(e_no,s_name,sf_name)
+teacher1 = Teacher(t_no,t_name,t_subject)
+teacher2 = Teacher(t_no,t_name,t_subject)
+course1  = Course(s_dep,s_branch,s_speci)
+course2  = Course(s_dep,s_branch,s_speci)
+print("Student:",student1.name ,"Id:",student1.enroll_num, "FatherName",student1.father_name)
+print("Teacher:",teacher1.teacher_name ,"Id:",teacher1.teacher_no, "Subject",teacher1.subject)
+print("Course:",course1.department ,"Id:",course1.branch, "Subject",course1.specialization)
+
