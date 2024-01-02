@@ -1,0 +1,70 @@
+class Customer:
+    def __init__(self,customer_id,name):
+        self.customer_id = customer_id
+        self.name = name
+class Bank_Account:
+    def __init__(self,account_number,customer,balance=0.0):
+        self.account_number = account_number
+        self.customer = customer
+        self.balance = balance
+    def deposit(self,amount):
+        if amount > 0:
+            self.balance += amount
+            print("Deposited amount", amount ,"New balance",self.balance)
+        else:
+            print("invlid Deposit Amount. Please enter a positive value")
+    
+    def withdraw(self,amount):
+        if 0 < amount <= self.balance:
+            self.balance -= amount
+            print("Withdraw",amount ,"New balance", self.balance)
+        else:
+            print("Invalid withdrawl amount or Insufficient funds")
+            
+    def get_balance(self):
+        return self.balance
+        
+class Bank:
+    def __init__(self,bank_name):
+        self.bank_name = bank_name
+        self.accounts = []
+        
+    def create_account(self,customer,initial_balance = 0.0):
+        account_number = len(self.accounts)+1
+        new_account = Bank_Account(account_number,customer,initial_balance)
+        self.accounts.append(new_account)
+        print("Account created for:",customer.name, "with account_number",account_number)
+        return new_account
+        
+    def find_account(self,account_number):
+        for account in self.accounts:
+            if account.account_number == account_number:
+                return account
+        print("Account with account number",account_number,"not found")
+        
+    def get_account_balance(self,account_number):
+        account = self.find_account(account_number)
+        if account:
+            return account.get_balance()
+        else :
+            return None
+            
+            
+bname = input("Enter the bank name:")
+my_bank = Bank(bname)
+custoname = input("Enter the coustomer name ")
+custo_id = int(input("Enter the id "))
+customer1 = Customer(custo_id,custoname)
+customer2 = Customer(custo_id,custoname)
+account1 = my_bank.create_account(customer1, 1000.0)
+account2 = my_bank.create_account(customer2, 500.0)
+account1.deposit(500)
+account2.withdraw(200)
+balance1 = my_bank.get_account_balance(account1.account_number)
+balance2 = my_bank.get_account_balance(account2.account_number)
+print("Account", account1.account_number, "balance:", balance1)
+print("Account", account2.account_number, "balance:", balance2)
+
+
+                
+    
