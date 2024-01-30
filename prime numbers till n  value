@@ -1,0 +1,12 @@
+import math
+
+
+def primenumbers(number):
+    primenumList = [2]
+    for num in range(3, number+1):
+        if all(num%i != 0 for i in range(2, int(math.sqrt(number))+1)):
+            primenumList.append(num)
+    
+    print(primenumList)
+
+primenumbers(23)
