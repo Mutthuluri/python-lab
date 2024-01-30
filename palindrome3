@@ -1,0 +1,9 @@
+def palindrome(item):
+    item = item.lower()
+    reversed_item = item[::-1]
+    if item == reversed_item:
+        print("Palindrome")
+    else:
+        print("Not Palindrome")
+
+palindrome("MOm")
